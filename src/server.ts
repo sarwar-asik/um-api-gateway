@@ -2,10 +2,15 @@ import { Server } from 'http';
 import app from './app';
 import config from './config';
 import logger from './shared/logger';
+import 'colors';
+import { RedisClient } from './shared/redis';
 
 async function bootstrap() {
+
+  await RedisClient.connect();
+  
   const server: Server = app.listen(config.port, () => {
-    logger.info(`Server running on port ${config.port}`);
+    logger.info(`Server running on port ${config.port}`.green.underline.bold);
   });
 
   const exitHandler = () => {
