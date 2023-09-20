@@ -8,11 +8,19 @@ const insertIntoDb = async (req: Request, res: Response, next: NextFunction) => 
 
         const result = await AcademicSemesterService.insertToDb(req)
 
-        sendResponse<any>(res,{
-            success:true,
-            statusCode:httpStatus.CREATED,
-            data:result
-        } )
+        sendResponse<any>(res,result as any)
+
+    }catch(error){
+        console.log(error);
+    }
+};
+
+const getAllFromDb = async (req: Request, res: Response, next: NextFunction) => {
+    try{
+
+        const result = await AcademicSemesterService.getAllFromDb(req)
+
+        sendResponse<any>(res,result as any)
 
     }catch(error){
         console.log(error);
@@ -21,5 +29,6 @@ const insertIntoDb = async (req: Request, res: Response, next: NextFunction) => 
 
 
 export const AcademicSemesterController ={
-    insertIntoDb
+    insertIntoDb,
+    getAllFromDb
 }
