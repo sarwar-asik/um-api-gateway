@@ -1,36 +1,77 @@
-import { IGenericResponse } from "../../../interfaces/common"
-import { CoreService as HttpService } from "../../../shared/axios"
-import {Request} from "express"
+import { IGenericResponse } from '../../../interfaces/common';
+import { CoreService as HttpService } from '../../../shared/axios';
+import { Request } from 'express';
 
-const insertToDb =async(req:Request):Promise<IGenericResponse> => {
+const insertToDb = async (req: Request): Promise<IGenericResponse> => {
+  console.log('🚀 ~ file: academicSemester.service.ts:4 ~ insertToDb ~ req:', req.body);
 
-    console.log("🚀 ~ file: academicSemester.service.ts:4 ~ insertToDb ~ req:", req.body)
+  const response: IGenericResponse = await HttpService.post('/academic-semester', req.body, {
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
 
-    const response:IGenericResponse  = await HttpService.post('/academic-semester',req.body,{
-        headers:{
-            Authorization:req.headers.authorization
-        }
-    })
+  return response;
+};
 
-    return response
-}
+const getAllFromDb = async (req: Request): Promise<IGenericResponse> => {
+  console.log(req.query);
 
-const getAllFromDb =async(req:Request):Promise<IGenericResponse> => {
+  const response: IGenericResponse = await HttpService.get('/academic-semester', {
+    params: req?.query,
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
 
+  return response;
+};
+
+const getSingleFromDb = async (req: Request): Promise<IGenericResponse> => {
+  console.log(req.params);
+
+  const response: IGenericResponse = await HttpService.get(`/academic-semester/${req.params?.id}`, {
+    params: req?.params,
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
+
+  return response;
+};
+
+const updateOneDb = async (req: Request): Promise<IGenericResponse> => {
+    // console.log(req.params);
+  
+    const response: IGenericResponse = await HttpService.patch(`/academic-semester/${req.params?.id}`,req.body, {
+      params: req?.params,
+      headers: {
+        Authorization: req.headers.authorization
+      }
+    });
+  
+    return response;
+  };
+  
+
+  const deleteFromDb = async (req: Request): Promise<IGenericResponse> => {
     console.log(req.params);
+  
+    const response: IGenericResponse = await HttpService.get(`/academic-semester/${req.params?.id}`, {
+      params: req?.params,
+      headers: {
+        Authorization: req.headers.authorization
+      }
+    });
+  
+    return response;
+  };
+  
 
-
-
-    const response:IGenericResponse  = await HttpService.get('/academic-semester',{
-        headers:{
-            Authorization:req.headers.authorization
-        }
-    })
-
-    return response
-}
-
-export  const AcademicSemesterService ={
-    insertToDb,
-    getAllFromDb
-}
+export const AcademicSemesterService = {
+  insertToDb,
+  getAllFromDb,
+  getSingleFromDb,
+  updateOneDb,
+  deleteFromDb
+};

@@ -4,31 +4,61 @@ import sendResponse from '../../../shared/response';
 import httpStatus from 'http-status';
 
 const insertIntoDb = async (req: Request, res: Response, next: NextFunction) => {
-    try{
+  try {
+    const result = await AcademicSemesterService.insertToDb(req);
 
-        const result = await AcademicSemesterService.insertToDb(req)
-
-        sendResponse<any>(res,result as any)
-
-    }catch(error){
-        console.log(error);
-    }
+    sendResponse<any>(res, result as any);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const getAllFromDb = async (req: Request, res: Response, next: NextFunction) => {
-    try{
+  try {
+    const result = await AcademicSemesterService.getAllFromDb(req);
 
-        const result = await AcademicSemesterService.getAllFromDb(req)
-
-        sendResponse<any>(res,result as any)
-
-    }catch(error){
-        console.log(error);
-    }
+    sendResponse<any>(res, result as any);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
+const getSingleFromDb = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicSemesterService.getSingleFromDb(req);
 
-export const AcademicSemesterController ={
-    insertIntoDb,
-    getAllFromDb
+    sendResponse<any>(res, result as any);
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+
+
+const updateOneDb = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const result = await AcademicSemesterService.updateOneDb(req);
+  
+      sendResponse<any>(res, result as any);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const deleteFromDb = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const result = await AcademicSemesterService.deleteFromDb(req);
+  
+      sendResponse<any>(res, result as any);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
+export const AcademicSemesterController = {
+  insertIntoDb,
+  getAllFromDb,
+  getSingleFromDb,
+  updateOneDb,
+  deleteFromDb
+};
