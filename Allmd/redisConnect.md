@@ -180,6 +180,9 @@
     };
 
 
+include same jwt secret `JWT_SECRET=sarwar-um-scret`
+
+
 
 
 
