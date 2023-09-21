@@ -725,10 +725,10 @@
   "resolved" "https://registry.npmjs.org/cloudinary-core/-/cloudinary-core-2.13.0.tgz"
   "version" "2.13.0"
 
-"cloudinary@^1.37.3":
-  "integrity" "sha512-XrGb60ZeQhYp9QQjj5DP3cYsAc27OV1B7pezvVxyqgHB5WMeMsofzeIy6+k0o/fCCv744Nf7xsYiTlUi3V0V/Q=="
-  "resolved" "https://registry.npmjs.org/cloudinary/-/cloudinary-1.37.3.tgz"
-  "version" "1.37.3"
+"cloudinary@^1.40.0":
+  "integrity" "sha512-Fifkl8NRw/M+Enw4cKCXc6e0Or28c5y6RVGYS3OCLzT1W8EfBt416FURhLuuL/S4BCVv8bSilmnM746kCtth3g=="
+  "resolved" "https://registry.npmjs.org/cloudinary/-/cloudinary-1.40.0.tgz"
+  "version" "1.40.0"
   dependencies:
     "cloudinary-core" "^2.13.0"
     "core-js" "^3.30.1"
