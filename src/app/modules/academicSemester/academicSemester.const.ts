@@ -1,4 +1,4 @@
-export const academicSemesterTitles: string[] = ['Autum', 'Summer', 'Fall'];
+export const academicSemesterTitles: string[] = ['Autumn', 'Summer', 'Fall'];
 export const academicSemesterCodes: string[] = ['01', '02', '03'];
 export const academicSemesterMonths: string[] = [
     'January',
