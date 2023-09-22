@@ -14,6 +14,7 @@ const envVarsZodSchema = z.object({
     REDIS_URL:z.string(),
     AUTH_SERVICE_URL:z.string(),
     CORE_SERVICE_URL:z.string(),
+    CLOUDINARY_SECRET:z.string(),
 
 });
 
@@ -29,6 +30,6 @@ export default {
         url:envVars.REDIS_URL
     },
     authServiceUrl:envVars.AUTH_SERVICE_URL,
-    coreServiceUrl:envVars.CORE_SERVICE_URL
-    
+    coreServiceUrl:envVars.CORE_SERVICE_URL,
+    cloudinary_api_secret:envVars.CLOUDINARY_SECRET
 };

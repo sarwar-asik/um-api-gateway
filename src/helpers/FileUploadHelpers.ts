@@ -2,12 +2,13 @@ import {v2 as cloudinary} from 'cloudinary';
 import multer from 'multer';
 import * as fs from "fs"
 import { IUploadFile, IcloudinaryResponse } from '../interfaces/fileUpload';
+import config from '../config';
 
 
 cloudinary.config({ 
   cloud_name: 'dwaiudyzc', 
   api_key: '448117487126886', 
-  api_secret: 'G8SWNZe7qnQR0lIyGe_adrFkN9A' 
+  api_secret: config.cloudinary_api_secret
 });
 
 // !multer (for upload file in folder )
@@ -35,7 +36,7 @@ const uploadToCloudinary =async(file:IUploadFile):Promise<IcloudinaryResponse>=>
   return new Promise((resolve,reject)=>{
     cloudinary.uploader.upload(file.path,
     // { public_id: file.originalname },  //! don't need the line otherwise will type error
-    
+
     (error:Error,result:IcloudinaryResponse)=>{
       fs.unlinkSync(file.path)   ///! unlinkSync means delete file
       if(error){

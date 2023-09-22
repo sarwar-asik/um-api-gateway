@@ -20,7 +20,7 @@ npm install multer
         cloudinary.config({
             cloud_name: 'dwaiudyzc',
             api_key: '448117487126886',
-            api_secret: 'G8SWNZe7qnQR0lIyGe_adr'
+            api_secret: 'G8SWNZe7qe_adr'
         });
 
 // !multer
