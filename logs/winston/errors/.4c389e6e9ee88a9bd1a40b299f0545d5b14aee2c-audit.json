@@ -69,6 +69,21 @@
             "date": 1695483585900,
             "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\8.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-23-09-21-error.log",
             "hash": "795c628cb35c8325bc603f691401075d50859d70713848fa366e0f7414ee0428"
+        },
+        {
+            "date": 1695487937789,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\8.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-23-09-22-error.log",
+            "hash": "d3ff8d5c033ccd60539fe1e423f0faab0a8a6aa2ca1edb17030bc380f2c09990"
+        },
+        {
+            "date": 1695491779667,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\8.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-23-09-23-error.log",
+            "hash": "687ecdcc88a78cc4ab40d87db3cbca297e20ab8fb94bf52ec575869fd63d5151"
+        },
+        {
+            "date": 1695492577332,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\8.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-24-09-00-error.log",
+            "hash": "48f114a358b036dc57e547770de0df277d986a2e4a71099479eb750fdf324a1b"
         }
     ],
     "hashType": "sha256"

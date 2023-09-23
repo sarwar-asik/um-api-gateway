@@ -17,12 +17,15 @@ import {
   generateFacultyId,
   generateStudentId,
 } from './user.utils';
+import { RedisClient } from '../../../shared/redis';
+import { EVENT_STUDENT_CREATED } from './user.constant';
 
 const createStudent = async (
   student: IStudent,
   user: IUser
 ): Promise<IUser | null> => {
   // default password
+  console.log('stude',student,"studentData");
   if (!user.password) {
     user.password = config.default_student_pass as string;
   }
@@ -85,6 +88,10 @@ const createStudent = async (
         },
       ],
     });
+  }
+
+  if(newUserAllData){
+    await RedisClient.publish(EVENT_STUDENT_CREATED,JSON.stringify(newUserAllData.student))
   }
 
   return newUserAllData;
