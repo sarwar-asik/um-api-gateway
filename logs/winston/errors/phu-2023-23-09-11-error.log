@@ -1,0 +1,84 @@
+Sat Sep 23 2023 11:16:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.update()` invocation:
+
+{
+  where: {
+    id: "3fdde5f9-44cf-434f-af8b-e950f9a8e010"
+  },
+  data: {
+    year: 2016,
+    title: "Autumn",
+    code: "01",
+    startMonth: "February",
+    endMonth: "July",
+    syncId: "3fdde5f9-44cf-434f-af8b-e950f9a8e010",
+    ~~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   isCurrent?: Boolean | NullableBoolFieldUpdateOperationsInput | Null,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   student?: StudentUpdateManyWithoutAcademicSemesterNestedInput,
+?   semesterRegistration?: SemesterRegistrationUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourseMarks?: StudentEnrolledCourseMarkUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentSemesterPaymens?: StudentSemesterPaymentUpdateManyWithoutAcademicSemesterNestedInput
+  }
+}
+
+Unknown argument `syncId`. Available options are listed in green.
+Sat Sep 23 2023 11:19:5 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.update()` invocation:
+
+{
+  where: {
+    id: "3fdde5f9-44cf-434f-af8b-e950f9a8e010"
+  },
+  data: {
+    year: 2016,
+    title: "Autumn",
+    code: "01",
+    startMonth: "February",
+    endMonth: "July",
+    syncId: "3fdde5f9-44cf-434f-af8b-e950f9a8e010",
+    ~~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   isCurrent?: Boolean | NullableBoolFieldUpdateOperationsInput | Null,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   student?: StudentUpdateManyWithoutAcademicSemesterNestedInput,
+?   semesterRegistration?: SemesterRegistrationUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourseMarks?: StudentEnrolledCourseMarkUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentSemesterPaymens?: StudentSemesterPaymentUpdateManyWithoutAcademicSemesterNestedInput
+  }
+}
+
+Unknown argument `syncId`. Available options are listed in green.
+Sat Sep 23 2023 11:20:8 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.update()` invocation:
+
+{
+  where: {
+    id: "3fdde5f9-44cf-434f-af8b-e950f9a8e010"
+  },
+  data: {
+    year: 2016,
+    title: "Autumn",
+    code: "01",
+    startMonth: "February",
+    endMonth: "July",
+    syncId: "3fdde5f9-44cf-434f-af8b-e950f9a8e010",
+    ~~~~~~
+?   id?: String | StringFieldUpdateOperationsInput,
+?   isCurrent?: Boolean | NullableBoolFieldUpdateOperationsInput | Null,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   student?: StudentUpdateManyWithoutAcademicSemesterNestedInput,
+?   semesterRegistration?: SemesterRegistrationUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentEnrolledCourseMarks?: StudentEnrolledCourseMarkUpdateManyWithoutAcademicSemesterNestedInput,
+?   studentSemesterPaymens?: StudentSemesterPaymentUpdateManyWithoutAcademicSemesterNestedInput
+  }
+}
+
+Unknown argument `syncId`. Available options are listed in green.
