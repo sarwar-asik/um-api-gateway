@@ -1,0 +1,18 @@
+Sat Sep 23 2023 23:17:34 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicFaculty.create()` invocation:
+
+{
+  data: {
+    title: "academic-departmenttest",
+    academicFacultyId: "650f0816a63e175f2c98a917",
+    ~~~~~~~~~~~~~~~~~
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   academicDepartment?: AcademicDepartmentCreateNestedManyWithoutAcademicFacultyInput,
+?   students?: StudentCreateNestedManyWithoutAcademicFacultyInput,
+?   faculties?: FacultyCreateNestedManyWithoutAcademicFacultyInput
+  }
+}
+
+Unknown argument `academicFacultyId`. Available options are listed in green.

@@ -14,6 +14,7 @@ const insertDB = async (data: Student): Promise<Student> => {
   const result = await prisma.student.create({
     data,
   });
+ 
   return result;
 };
 
@@ -276,6 +277,25 @@ const getMyAcademicInfo = async (authUserId: string): Promise<any> => {
   return { academicInfo, course:groupByAcademicSemesterData };
 };
 
+const CreateStudentFromEvent= async(e:any)=>{
+  const studentData:Partial<Student> = {
+    studentId:e.id,
+    firstName:e.name.firstName,
+    lastName:e.name.lastName,
+    middleName:e.name.middleName,
+    email:e.email,
+    contactNo:e.contactNo,
+    gender:e.gender,
+    bloodGroup:e.bloodGroup,
+    academicSemesterId:e.academicSemester.syncId,
+    academicDepartmentId:e.academicDepartment.syncId,
+    academicFacultyId:e.academicFaculty.syncId
+  }
+  await insertDB(studentData as Student)
+
+
+}
+
 export const StudentsService = {
   insertDB,
   getAllDb,
@@ -285,4 +305,7 @@ export const StudentsService = {
   myCourses,
   getMyCourseSchedules,
   getMyAcademicInfo,
+
+  CreateStudentFromEvent
+
 };

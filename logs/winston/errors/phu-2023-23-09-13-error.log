@@ -1,0 +1,5 @@
+Sat Sep 23 2023 13:6:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicFaculty.delete()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.

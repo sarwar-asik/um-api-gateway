@@ -81,5 +81,5 @@ export const RedisClient = {
   disconnect,
 
   publish: redisPubClient.publish.bind(redisPubClient),
-  subscribe: redisSubClient.publish.bind(redisSubClient),
+  subscribe: redisSubClient.subscribe.bind(redisSubClient),
 };
