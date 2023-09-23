@@ -102,6 +102,7 @@ const deleteByIdFromDB = async (
 };
 
 const insertIntoDBFromEvent = async (e: AcademicFacultyCreatedEvent): Promise<void> => {
+  console.log(e,"from acdFaculty Event");
   await AcademicFaculty.create({
     syncId: e.id,
     title: e.title
