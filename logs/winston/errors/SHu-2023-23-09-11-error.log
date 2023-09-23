@@ -1,0 +1,4 @@
+Sat Sep 23 2023 11:21:30 } [SH] error: Cast to ObjectId failed for value "{ syncId: '3fdde5f9-44cf-434f-af8b-e950f9a8e010' }" (type Object) at path "_id" for model "AcademicSemester"
+Sat Sep 23 2023 11:22:17 } [SH] error: Cast to ObjectId failed for value "{ syncId: '3fdde5f9-44cf-434f-af8b-e950f9a8e010' }" (type Object) at path "_id" for model "AcademicSemester"
+Sat Sep 23 2023 11:23:0 } [SH] error: Cast to ObjectId failed for value "{ syncId: '3fdde5f9-44cf-434f-af8b-e950f9a8e010' }" (type Object) at path "_id" for model "AcademicSemester"
+Sat Sep 23 2023 11:23:53 } [SH] error: Cast to ObjectId failed for value "{ year: 2016 }" (type Object) at path "_id" for model "AcademicSemester"

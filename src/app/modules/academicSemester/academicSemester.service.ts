@@ -140,21 +140,24 @@ const deleteSemester = async (
 const createSemesterFromEvent = async (
   e: IAcademicSemesterCreatedEvent
 ): Promise<void> => {
-  await AcademicSemester.create({
+ const createData= await AcademicSemester.create({
     title: e.title,
     year: e.year,
     code: e.code,
     startMonth: e.startMonth,
     endMonth: e.endMonth,
-    syncId: e.id,
+    syncId: e.id
   });
+
+  console.log(createData,"ccccccccccc");
 };
+
 
 // ! Redis for event update ///
 const updateOneIntoDbFromEvent = async (
   e: IAcademicSemesterCreatedEvent
 ): Promise<void> => {
-  await AcademicSemester.findByIdAndUpdate(
+  await AcademicSemester.findOneAndUpdate(
     { syncId: e.id },
     {
       $set: {
