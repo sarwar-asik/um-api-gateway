@@ -12,9 +12,38 @@ const createStudent = async (req: Request) => {
   if (uploadedImage) {
     req.body.profileImage = uploadedImage?.secure_url;
   }
+  const { academicDepartment,academicSemester,academicFaculty } = req?.body;
+  // for academicDepartment
+  const academicDepartmentResponse = await AuthService.get(
+    `/academic-departments?syncId=${academicDepartment}`
+  );
 
-  const academicDepartmentResponse = await AuthService.get(`/`)
-  
+  console.log(academicDepartmentResponse);
+  if (academicDepartmentResponse.data && Array.isArray(academicDepartmentResponse.data)) {
+    req.body.student.academicDepartment = academicDepartmentResponse.data[0].id;
+  }
+
+  // for academicSemester 
+
+  const academicSemesterResponse = await AuthService.get(
+    `/academic-semesters?syncId=${academicSemester}`
+  );
+
+  console.log(academicSemesterResponse);
+  if (academicSemesterResponse.data && Array.isArray(academicSemesterResponse.data)) {
+    req.body.student.academicSemester = academicSemesterResponse.data[0].id;
+  }
+
+  // for academicFaulty :::
+
+  const academicFacultyResponse = await AuthService.get(
+    `/academic-Faculty?syncId=${academicFaculty}`
+  );
+
+  console.log(academicFacultyResponse);
+  if (academicFacultyResponse.data && Array.isArray(academicFacultyResponse.data)) {
+    req.body.student.academicFaculty = academicFacultyResponse.data[0].id;
+  }
 
   return uploadedImage;
 };

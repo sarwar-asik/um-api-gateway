@@ -31,7 +31,8 @@ const update = z.object({
     code: z.enum([...academicSemesterCodes] as [string, ...string[]]).optional(),
     year: z.number().optional(),
     startMonth: z.enum([...academicSemesterMonths] as [string, ...string[]]).optional(),
-    endMonth: z.enum([...academicSemesterMonths] as [string, ...string[]]).optional()
+    endMonth: z.enum([...academicSemesterMonths] as [string, ...string[]]).optional(),
+    syncId: z.string().optional()
   })
 });
 
