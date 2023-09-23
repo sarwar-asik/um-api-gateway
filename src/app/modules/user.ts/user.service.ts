@@ -37,7 +37,7 @@ const createStudent = async (req: Request) => {
   // for academicFaulty :::
 
   const academicFacultyResponse = await AuthService.get(
-    `/academic-Faculty?syncId=${academicFaculty}`
+    `/academic-faculties?syncId=${academicFaculty}`
   );
 
   console.log(academicFacultyResponse);
