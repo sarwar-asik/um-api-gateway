@@ -140,7 +140,8 @@ const deleteSemester = async (
 const createSemesterFromEvent = async (
   e: IAcademicSemesterCreatedEvent
 ): Promise<void> => {
- const createData= await AcademicSemester.create({
+//  const createData=
+  await AcademicSemester.create({
     title: e.title,
     year: e.year,
     code: e.code,
@@ -149,7 +150,7 @@ const createSemesterFromEvent = async (
     syncId: e.id
   });
 
-  console.log(createData,"ccccccccccc");
+  // console.log(createData,"ccccccccccc");
 };
 
 
