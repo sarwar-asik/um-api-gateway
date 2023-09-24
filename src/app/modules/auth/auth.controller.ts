@@ -8,7 +8,9 @@ import { AuthService } from './auth.service';
 const loginUser = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
   const result = await AuthService.loginUser(loginData);
-  const { refreshToken, ...others } = result;
+  const { refreshToken, 
+    // ...others 
+  } = result;
 
   // set refresh token into cookie
 
@@ -22,8 +24,8 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   sendResponse<ILoginUserResponse>(res, {
     statusCode: 200,
     success: true,
-    message: 'User lohggedin successfully !',
-    data: others,
+    message: 'User loggedIn successfully !',
+    data: result,
   });
 });
 
@@ -49,7 +51,22 @@ const refreshToken = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+
+const changePassword = catchAsync(async (req: Request, res: Response) => {
+  const user = req.user;
+  const { ...passwordData } = req.body;
+
+  await AuthService.changePassword(user, passwordData);
+
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Password changed successfully !',
+  });
+});
+
 export const AuthController = {
   loginUser,
   refreshToken,
+  changePassword,
 };

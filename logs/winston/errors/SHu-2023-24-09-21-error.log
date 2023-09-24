@@ -1,0 +1,4 @@
+Sun Sep 24 2023 21:0:29 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ E11000 duplicate key error collection: um-auth-service.students index: email_1 dup key: { email: "auth1@gmail.com" }
+Sun Sep 24 2023 21:34:26 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid Refresh Token
+Sun Sep 24 2023 21:35:57 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid Refresh Token
+Sun Sep 24 2023 21:36:21 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Invalid Refresh Token
