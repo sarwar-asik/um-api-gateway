@@ -7,7 +7,8 @@ const createStudent = async (req: Request, res: Response, next: NextFunction) =>
   // console.log("from create-user controller", req?.body);
 //   console.log('req?.file', req.file, 'req.body', req.body);
   // fileUploadHelper.uploadToCloudinary()
-  const result = await UserService.createStudent(req)
+  try {
+    const result = await UserService.createStudent(req)
 
   sendResponse(res,{
     statusCode:400,
@@ -15,6 +16,9 @@ const createStudent = async (req: Request, res: Response, next: NextFunction) =>
     success:true,
     data:result
   })
+  } catch (error) {
+    next(error)
+  }
 };
 
 export const UserController = {
