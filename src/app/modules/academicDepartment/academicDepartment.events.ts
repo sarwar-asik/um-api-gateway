@@ -14,6 +14,7 @@ import { AcademicDepartmentService } from './academicDepartment.service';
 const initAcademicDepartmentEvents = () => {
     RedisClient.subscribe(EVENT_ACADEMIC_DEPARTMENT_CREATED, async (e: string) => {
         const data: AcademicDepartmentCreatedEvent = JSON.parse(e);
+        // console.log(data,'AcademicDepartmentCreatedEvent data');
 
         await AcademicDepartmentService.insertIntoDBFromEvent(data);
     });

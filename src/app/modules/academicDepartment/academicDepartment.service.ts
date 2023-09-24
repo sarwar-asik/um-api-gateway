@@ -115,6 +115,8 @@ const deleteDepartment = async (
 };
 
 const insertIntoDBFromEvent = async (e: AcademicDepartmentCreatedEvent): Promise<void> => {
+
+  console.log(e,"from AcademicDepartmentCreatedEvent");
   const academicFaculty = await AcademicFaculty.findOne({ syncId: e.academicFacultyId });
   const payload = {
     title: e.title,

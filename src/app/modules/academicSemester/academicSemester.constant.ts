@@ -39,14 +39,14 @@ export const academicSemesterTitleCodeMapper: {
   Fall: '03',
 };
 
-export const academicSemesterSearchableFields = ['title', 'code', 'year'];
+export const academicSemesterSearchableFields = ['title', 'code', 'year', 'syncId'];
 
 export const academicSemesterFilterableFields = [
   'searchTerm',
   'title',
   'code',
-  'year',
-  'syncId'
+  'year', 'syncId'
+ 
 ];
 
 

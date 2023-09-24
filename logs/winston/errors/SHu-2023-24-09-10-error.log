@@ -1,0 +1,4 @@
+Sun Sep 24 2023 10:20:42 } [SH] error: Failed to connect database AcademicDepartmentCreatedEvent is not defined
+Sun Sep 24 2023 10:20:49 } [SH] error: Failed to connect database (0 , academicDepartment_interfaces_1.AcademicDepartmentCreatedEvent) is not a function
+Sun Sep 24 2023 10:56:21 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 24 2023 10:58:20 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized

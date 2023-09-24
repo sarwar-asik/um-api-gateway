@@ -1,0 +1,4 @@
+Sun Sep 24 2023 11:0:51 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Sun Sep 24 2023 11:2:22 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "fb10f3d9-b9d4-410f-9b10-9b40f0b9328b" (type string) at path "_id" for model "AcademicSemester"
+Sun Sep 24 2023 11:4:42 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "d21a428a-f120-4ef9-805f-76477cc6543d" (type string) at path "_id" for model "AcademicSemester"
+Sun Sep 24 2023 11:7:59 } [SH] error: 🐱‍🏍 globalErrorHandler ~~ Cast to ObjectId failed for value "d21a428a-f120-4ef9-805f-76477cc6543d" (type string) at path "_id" for model "AcademicSemester"
