@@ -13,6 +13,8 @@ const getAllFromDB = async (req: Request, res: Response, next: NextFunction) => 
 
 const insertIntoDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
+
+    // console.log("accFFFFFFFFFFF");
     const result = await AcademicFacultyService.insertIntoDB(req);
     sendResponse(res, result);
   } catch (error) {

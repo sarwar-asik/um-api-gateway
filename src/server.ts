@@ -10,7 +10,7 @@ async function bootstrap() {
   await RedisClient.connect();
   
   const server: Server = app.listen(config.port, () => {
-    logger.info(`Server running on port ${config.port}`.green.underline.bold);
+    console.log(`🥫🥫 Server running on port ${config.port}`.green.underline.bold);
   });
 
   const exitHandler = () => {

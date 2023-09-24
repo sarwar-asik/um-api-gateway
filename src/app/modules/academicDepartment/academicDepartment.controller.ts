@@ -4,6 +4,10 @@ import { AcademicDepartmentService } from './academicDepartment.service';
 
 const getAllFromDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
+
+    // res.json({
+    //   status:true
+    // })
     const result = await AcademicDepartmentService.getAllFromDB(req);
     sendResponse(res, result);
   } catch (error) {
