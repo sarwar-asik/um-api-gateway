@@ -21,8 +21,8 @@ const insertIntoDB = async (
     data,
     include: {
       academicFaculty: true,
-    },
-  });
+    }
+  })
 
   if (result) {
     await RedisClient.publish(EVENT_ACADEMIC_DEPARTMENT_CREATED, JSON.stringify(result));
