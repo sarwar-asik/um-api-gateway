@@ -41,7 +41,7 @@ const refreshToken = async(req:Request,res:Response,next:NextFunction)=>{
     };
   
     res.cookie('refreshToken', result.data.accessToken, cookieOptions);
-    
+
     sendResponse(res,{
         statusCode:400,
         message:"new refresh Token generated",
@@ -53,4 +53,22 @@ const refreshToken = async(req:Request,res:Response,next:NextFunction)=>{
     }
 }
 
-export const AuthenticationController ={loginUser,refreshToken}
+
+const changePassword = async(req:Request,res:Response,next:NextFunction)=>{
+    try {
+    const result = await AuthenticationService.changePassword(req)
+    // console.log(result);
+
+    sendResponse(res,{
+        statusCode:400,
+        message:"change password successfully",
+        success:true,
+        data:result
+      })
+    } catch (error) {
+        next(error)
+    }
+}
+
+
+export const AuthenticationController ={loginUser,refreshToken,changePassword}
