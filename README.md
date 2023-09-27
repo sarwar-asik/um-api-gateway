@@ -1,6 +1,4 @@
-#### api endpoints  :::::
-
-
+#### api endpoints :::::
 
 ##### used backend technology :::
 
@@ -24,216 +22,187 @@
         - http-status,
         - bcrypt(password hashing),
 
-
-**academic-semester** 
+**academic-semester**
 
 1.  http://localhost:5000/api/v1/academic-semester (post)
 
-
-
 in req.body >>>
 
-                {
-                  "year": 2023,
-                  "title": "Sample Course3",
-                  "code": "3",
-                  "startMonth": "January",
-                  "endMonth": "May"
-                }
+```json
+{
+  "year": 2023,
+  "title": "Sample Course3",
+  "code": "3",
+  "startMonth": "January",
+  "endMonth": "May"
+}
+```
 
 in headers (example) >>>
-    
-     
-        authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-  
 
+```json
 
+        authorization  : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+```
 
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
           http://localhost:5000/api/v1/academic-semester?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
+3.  get single data by id ::
 
-3. get single data by id ::
+```
 
-           http://localhost:5000/api/v1/academic-semester/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
-
-
+http://localhost:5000/api/v1/academic-semester/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
+```
 
 **academic-faculty**
 
-1. create data 
+1. create data
 
 http://localhost:5000/api/v1/academic-faculty(POST)
 
 in req.body
 
-      {
-          "title":"academic-faculty3"
-      }
+```json
+{
+  "title": "academic-faculty3"
+}
+```
 
 in headers (example) >>>
-    
-     
+
         authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-  
 
-
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
           http://localhost:5000/api/v1/academic-faculty?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
           http://localhost:5000/api/v1/academic-faculty/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
 
-
-
 **academic-department**
 
-
-1. create data 
+1. create data
 
 http://localhost:5000/api/v1/academic-department(POST)
 
 in req.body
 
-    {
-    "title":"academic-department2",
-    "academicFacultyId":"63bf22f8-40d0-425b-b8dc-f8d86e65d515"
-      }
+```json
+{
+  "title": "academic-department2",
+  "academicFacultyId": "63bf22f8-40d0-425b-b8dc-f8d86e65d515"
+}
+```
 
 in headers (example) >>>
-    
-     
+
         authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-  
 
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
           http://localhost:5000/api/v1/academic-department?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
         http://localhost:5000/api/v1/academic-department/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
 
-
-
-
-
 **student**
 
-
-1. create data 
+1. create data
 
 http://localhost:5000/api/v1/students/(POST)
 
 in req.body >>>
 
-                        {
-                      "studentID": "22222",
-                      "firstName": "John",
-                      "lastName": "Doe",
-                      "middleName": "M",
-                      "profileImage": "profile.jpg",
-                      "email": "john.doe@example.com",
-                      "contactNo": "1234567890",
-                      "gendar": "Male",
-                      "bloodGroup": "A+",
-                      "academicSemestarId": "b5b9c7f8-a485-41f4-878f-503b0ec640ea",
-                      "academicDepartmentId": "49eee978-4b24-4120-9a0b-e6ab74a2cc11",
-                      "academicFacultyId": "84d88768-cb8a-443e-b148-b5c42758cc7b"
-                    }
+```json
+{
+  "studentID": "22222",
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "M",
+  "profileImage": "profile.jpg",
+  "email": "john.doe@example.com",
+  "contactNo": "1234567890",
+  "gendar": "Male",
+  "bloodGroup": "A+",
+  "academicSemestarId": "b5b9c7f8-a485-41f4-878f-503b0ec640ea",
+  "academicDepartmentId": "49eee978-4b24-4120-9a0b-e6ab74a2cc11",
+  "academicFacultyId": "84d88768-cb8a-443e-b148-b5c42758cc7b"
+}
+```
 
 in headers (example) >>>
-    
+
 `authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
-  
 
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
           http://localhost:5000/api/v1/students?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
            http://localhost:5000/api/v1/students/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
 
-
-
 **building**
 
-
-1. create data 
-
-
+1. create data
 
 http://localhost:5000/api/v1/buildings/(POST)
 
-
 in req.body
 
-       {
-    "title":"building1"
-    }
+```json
+{
+  "title": "building1"
+}
+```
 
 in headers (example) >>>
-    
-     
+
 `authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
 
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
         http://localhost:5000/api/v1/buildings?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
           http://localhost:5000/api/v1/buildings/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
 
-
-
 **room**
 
-
-1. create data  (jwt verified)
+1. create data (jwt verified)
 
 http://localhost:5000/api/v1/rooms/(POST)
 
- in req.body >>
+in req.body >>
 
-     {
+```json
+ {
     "roomNumber":"03",
     "floor":"01",
     "buildingId":"cf4ccadf-ab8f-45ea-9f3d-cbd5eb864887"
     }
 
+
+```
+
 in headers (example) >>>
-    
-     
+
 `authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
-  
 
-2. get all data with pagination and filters
-
+2.  get all data with pagination and filters
 
           http://localhost:5000/api/v1/rooms?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
           http://localhost:5000/api/v1/rooms/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
-          
 
 **courses**
-
 
 1. create data (jwt verified)
 
@@ -242,34 +211,36 @@ in req.body >>>
 http://localhost:5000/api/v1/courses/(POST)
 
 
+```json
+
     {
     "title":"course4",
     "code":"4444",
     "credits":9
-  }
+
+}
+
+```
 
 in headers (example) >>>
-    
+
 `authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
-  
 
-2. get all data with pagination and filters ;
-
+2.  get all data with pagination and filters ;
 
          http://localhost:5000/api/v1/courses?page=1&limit=5&sortBy=asc&title=Course1 (GET)
 
-
-3. get single data by id ::
+3.  get single data by id ::
 
           http://localhost:5000/api/v1/courses/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (GET)
-4. update course data by id ::
+
+4.  update course data by id ::
 
           http://localhost:5000/api/v1/courses/19c54336-3fb4-4e83-962d-abcdd4d42cb2 (PUT)
 
-
 In req.body >>>>
-
-                {
+```json
+  {
                 "title": "course6",
                 "code": "666666",
                 "Prerequisite": [
@@ -288,8 +259,9 @@ In req.body >>>>
                 ]
                 }
 
-**courses-faculty**
+```
 
+**courses-faculty**
 
 1. create data (jwt verified)
 
@@ -297,41 +269,41 @@ in req.body >>>
 
 http://localhost:5000/api/v1/courses/c67ce94d-6e44-4508-9a1d-8a1677d338f8/remove-faculties(POST)
 
-
+```json
         {
         "faculties":[
                 "97e221c1-dcf2-4eef-9fd9-9c1ddca581ad",
                 "454e221c1-dcf2-4eef-9fd9-9c1ddca581da"
         ]
         }
+```
 
 in headers (example) >>>
-    
-     
- `authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
- 
-3. delete single data by id ::
+
+`authorization  : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
+
+3.  delete single data by id ::
 
           http://localhost:5000/api/v1/courses/c67ce94d-6e44-4508-9a1d-8a1677d338f8/remove-faculties(DELETE)
 
-
 In req?.body >>>>
 
-                {
+```json
+
+    {
                 "faculties":[
                         "97e221c1-dcf2-4eef-9fd9-9c1ddca581ad"
                 ]
                 }
 
 
-
-
-
+```
 # University Management Core Service
+
 This guide will walk you through the process of setting up the University Management Core Service Starter project. By following these steps, you will clone the project, install dependencies, and configure Prisma for database management. Let's get started!
 
-
 ## Installation Steps
+
 ### Follow these steps to clone and set up starter project:
 
 1. `Clone the project:` Open your terminal or command prompt and run the following command to clone the project repository:
@@ -355,11 +327,13 @@ yarn install
 4. Configure Prisma and the database connection:
 
 - Add Prisma as a development dependency by running the following command:
+
 ```bash
 yarn add prisma --save-dev
 ```
 
 - Set up your Prisma project by creating the Prisma schema file using the following command:
+
 ```bash
 npx prisma init
 ```
@@ -374,6 +348,7 @@ datasource db {
 ```
 
 - Create a .env file in the project root directory and set the DATABASE_URL environment variable. Replace the placeholders with your database connection details:
+
 ```bash
 DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
 ```
@@ -384,15 +359,20 @@ DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
 ```bash
 npx prisma migrate dev --name init
 ```
+
 This command creates a new migration file based on your schema changes and applies it to your database.
 
 6. `Install Prisma Client:` Install the Prisma Client library by running the following command:
+
 ```bash
 yarn add @prisma/client
 ```
 
+```text
 This command installs the Prisma Client, which provides an interface to interact with your database.
 
 That's it! You have successfully set up the University Management Core Service Starter project. You can now start exploring and working with the codebase. Refer to the project documentation or README for further instructions on how to run and use the core service.
 
-Happy coding!
+Happy coding! 
+
+```

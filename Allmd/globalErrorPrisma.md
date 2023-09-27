@@ -5,6 +5,7 @@
 
 **src>app>error>handleValidationError.ts>>>**
 
+```ts
 
     import { Prisma } from '@prisma/client';
     import { IGenericErrorResponse } from '../interfaces/common';
@@ -29,9 +30,11 @@
     export default handleValidationError;
 
 
+```
 
 **src>app>middleware>globalErrorHandler.ts (for handleValidationError.ts)>>**
 
+```ts
 
         if (error instanceof Prisma.PrismaClientValidationError) {
             const simplifiedError = handleValidationError(error);
@@ -40,6 +43,7 @@
             errorMessages = simplifiedError.errorMessages;
         } 
 
+```
 
 
 ###### PrismaClientKnownError.ts :::::
@@ -48,7 +52,9 @@
 
 
 
-    import { Prisma } from '@prisma/client';
+
+```ts
+ import { Prisma } from '@prisma/client';
     import { IGenericErrorMessage } from '../interfaces/error';
 
     const handleClientError = (error:Prisma.PrismaClientKnownRequestError ) => {
@@ -90,13 +96,17 @@
     export default handleClientError 
 
 
+```
 
 **src>app>middleware>globalErrorHandler.ts (for handleValidationError.ts)>>**
 
-    // ! for prisma ////
+```js
+   // ! for prisma ////
     else if (error instanceof Prisma.PrismaClientKnownRequestError) {
         const simplifiedError = handleClientError(error);
         statusCode = simplifiedError.statusCode;
         message = simplifiedError.message;
         errorMessages = simplifiedError.errorMessages;
     } 
+
+```

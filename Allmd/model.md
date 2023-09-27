@@ -1,8 +1,10 @@
-
-### model create with property 
-
+### model create with property
 
 ### various default values of model :::::
+
+```sql
+
+
 
         model user {
             <!-- for unique -->
@@ -17,18 +19,22 @@
             status   SemesterRegistrationStatus?   @default(UPCOMING)
             dayOfWeek              WeekDays             @default(SATURDAY)
 
-            
+
         }
 
+```
 
 **using enum value with a default**
 
-        enum SemesterRegistrationStatus {UPCOMING
-                                         ONGOING
-                                         ENDED
-                                        }
+```sql
 
-         enum WeekDays {
+
+  enum SemesterRegistrationStatus {UPCOMING
+                                    ONGOING
+                                    ENDED
+                                 }
+
+         enum WeekDays{
                             SATURDAY
                             SUNDAY
                             MONDAY
@@ -38,11 +44,15 @@
                             FRIDAY
                         }
 
+```
+
 #### relation between multiple model (click save ) ::::
 
 ##### system-1 (simple relation) ::::
 
-    model AcademicDepartment {
+```sql
+
+ model AcademicDepartment {
         academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
     }
 
@@ -53,11 +63,13 @@
     }
 
 
-#### system-2 (relation with 2 complex property )  ::::::
+```
 
+#### system-2 (relation with 2 complex property ) ::::::
 
-    model CourseToPrerequisite {
-        course         Course   @relation(fields: [courseID], 
+```sql
+   model CourseToPrerequisite {
+        course         Course   @relation(fields: [courseID],
             references: [id], name: "CourseToPrerequisite")
         prerequisiteId String
         prerequisite   Course   @relation(fields: [prerequisiteId],    references: [id], name: "PrerequisiteToCourse")
@@ -71,3 +83,7 @@
         Prerequisite    CourseToPrerequisite[] @relation("CourseToPrerequisite")
         PrerequisiteFor CourseToPrerequisite[] @relation("PrerequisiteToCourse")
     }
+
+
+
+```

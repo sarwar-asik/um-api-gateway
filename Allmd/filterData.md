@@ -6,7 +6,7 @@
     // ! filter data 
 
 
-```
+```ts
 
         const getAllDb = catchAsync(async (req: Request, res: Response) => {
         const filters = pick(req.query,CourseFilterableFields);
@@ -28,7 +28,9 @@
 
 #### course>course.service.ts :::::
 
-    const getAllDb = async (
+```ts
+
+ const getAllDb = async (
     filters: ICourseFilterRequest,
     options: IPaginationOptions
     ): Promise<IGenericResponse<Course[]>> => {
@@ -119,13 +121,15 @@
         },
         data: result,
     };
-    };
+    }
+```
 
 
 ### modules>course.interface.ts >>>>>
 
 
 
+```ts
     export type ICourseFilterRequest = {
         searchTerm?: string | null;
         roomId?: string | null;
@@ -134,12 +138,15 @@
 
         offeredCourseSectionId?: string | null;
     };
+```
 
 
 ### modules>course.constant.ts >>>>>
 
 
-    export const CourseSearchableFields = ['dayOfWeek'];
+```ts
+
+  export const CourseSearchableFields = ['dayOfWeek'];
 
     export const CourseRelationalFields = [
         'offeredCourseSectionId',
@@ -157,3 +164,4 @@
         roomId:'room',
         semesterRegistrationId:'semesterRegistration'
     }
+```
