@@ -12,6 +12,7 @@ npm install multer
 
 ### create src>helpers>FileUploadHelpers.ts:::
 
+   ```ts
     import {v2 as cloudinary} from 'cloudinary';
     import multer from 'multer';
     import * as fs from "fs"
@@ -22,10 +23,11 @@ npm install multer
                 cloud_name: 'dwaiudyzc', 
                 api_key: '448117487126886', 
                 api_secret: config.cloudinary_api_secret
-            });
+            });```
 
 // !multer
 
+   ```ts
     const storage = multer.diskStorage({
         destination:function(req,file,cb){
             cb(null,'uploads/')
@@ -36,10 +38,11 @@ npm install multer
         }
     })
 
-    const upload = multer({storage:storage})
+    const upload = multer({storage:storage})```
 
 // ! cloudinary ///
 
+   ```js
     const uploadToCloudinary =async(file:IUploadFile):Promise<IcloudinaryResponse>=>{
     //   cloudinary.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
     // { public_id: "olympic_flag" }, 
@@ -60,11 +63,13 @@ npm install multer
     
     );
   })
-}
+}```
 
 
 
 #### in users>user.routes.ts >>>>>
+```ts
+
 
         router.post('/create-student', auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),fileUploadHelper.upload.single('file'),
             (req: Request, res: Response, next: NextFunction) => {
@@ -72,9 +77,11 @@ npm install multer
                 return  UserController.createStudent(req,res,next)
             }
         );
+```
 
 #### in user.service.ts >>>
 
+```ts
 
     const createStudent = async (req: Request) => {
         console.log(req.file, 'files');
@@ -84,10 +91,12 @@ npm install multer
         return uploadedImage
     
     };
+```
 
 
 ### type declare src>interface>fileUpload.ts::::
 
+```ts
 
     export type  IUploadFile ={
         fieldname: string,
@@ -123,4 +132,4 @@ npm install multer
         overwritten: boolean,
         original_filename: string,
         api_key: string,
-    }
+    }```

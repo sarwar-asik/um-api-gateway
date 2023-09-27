@@ -11,6 +11,7 @@
         
     // !multer 
 
+  ```ts
     const storage = multer.diskStorage({
         destination:function(req,file,cb){
             cb(null,'uploads/')
@@ -25,9 +26,10 @@
     const upload = multer({storage:storage})
 
 
-
+```
 #### in users>user.routes.ts >>>>>
 
+  ```ts
         router.post('/create-student', auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),fileUploadHelper.upload.single('file'),
             (req: Request, res: Response, next: NextFunction) => {
                 req.body = UserValidation.createUserZodSchema.parse(JSON.parse(req.body.data));
@@ -35,3 +37,4 @@
             }
         );
 
+```
