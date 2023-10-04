@@ -30,43 +30,51 @@ const getAllFromDb = async (req: Request): Promise<IGenericResponse> => {
 const getSingleFromDb = async (req: Request): Promise<IGenericResponse> => {
   console.log(req.params);
 
-  const response: IGenericResponse = await HttpService.get(`/academic-semesters/${req.params?.id}`, {
-    params: req?.params,
-    headers: {
-      Authorization: req.headers.authorization
+  const response: IGenericResponse = await HttpService.get(
+    `/academic-semesters/${req.params?.id}`,
+    {
+      params: req?.params,
+      headers: {
+        Authorization: req.headers.authorization
+      }
     }
-  });
+  );
 
   return response;
 };
 
 const updateOneDb = async (req: Request): Promise<IGenericResponse> => {
-    // console.log(req.params);
-  
-    const response: IGenericResponse = await HttpService.patch(`/academic-semesters/${req.params?.id}`,req.body, {
-      params: req?.params,
-      headers: {
-        Authorization: req.headers.authorization
-      }
-    });
-  
-    return response;
-  };
-  
+  // console.log(req.params);
 
-  const deleteFromDb = async (req: Request): Promise<IGenericResponse> => {
-    console.log(req.params);
-  
-    const response: IGenericResponse = await HttpService.delete(`/academic-semesters/${req.params?.id}`, {
+  const response: IGenericResponse = await HttpService.patch(
+    `/academic-semesters/${req.params?.id}`,
+    req.body,
+    {
       params: req?.params,
       headers: {
         Authorization: req.headers.authorization
       }
-    });
-  
-    return response;
-  };
-  
+    }
+  );
+
+  return response;
+};
+
+const deleteFromDb = async (req: Request): Promise<IGenericResponse> => {
+  console.log(req.params);
+
+  const response: IGenericResponse = await HttpService.delete(
+    `/academic-semesters/${req.params?.id}`,
+    {
+      params: req?.params,
+      headers: {
+        Authorization: req.headers.authorization
+      }
+    }
+  );
+
+  return response;
+};
 
 export const AcademicSemesterService = {
   insertToDb,
