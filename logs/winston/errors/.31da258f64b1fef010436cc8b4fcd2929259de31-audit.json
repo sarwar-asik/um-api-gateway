@@ -1,0 +1,55 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\.31da258f64b1fef010436cc8b4fcd2929259de31-audit.json",
+    "files": [
+        {
+            "date": 1695836967601,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-27-09-23-error.log",
+            "hash": "9133b4f53551e2c6163dd8afaf58d70b327fa7748aea33ad44852a5034c57f48"
+        },
+        {
+            "date": 1695841365129,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-28-09-01-error.log",
+            "hash": "1175b068f61d3a1c0ade1a839f5170566f3a1ee37e60f666bae3e68c3ea75e99"
+        },
+        {
+            "date": 1696002726693,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-29-09-21-error.log",
+            "hash": "676165fd1f3917270c2c69673935c319d5afc912cf374f20782e415f82b8f9d9"
+        },
+        {
+            "date": 1696007916178,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-29-09-23-error.log",
+            "hash": "c29872c951632463a1b731bc71202d086ce63ee6b735dad586a3b2897e07dae0"
+        },
+        {
+            "date": 1696010410790,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-30-09-00-error.log",
+            "hash": "820adeb86bc6295dcccd9913b9b07b225d06020d9405ab415688d21d6b6c8e95"
+        },
+        {
+            "date": 1696262671229,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-02-10-22-error.log",
+            "hash": "a4f4bb82a657249ef23e61d0079206e27f56bfbf91b92990b75922edb81c818e"
+        },
+        {
+            "date": 1696434646313,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-04-10-21-error.log",
+            "hash": "ce50a000d6fc1b04ff0a9dce2f8fced081665e69d56e19ccee435ea01c3b2b9d"
+        },
+        {
+            "date": 1696436561475,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-04-10-22-error.log",
+            "hash": "e91c7eff19519677b9125a3b0219c56d1942c09a41333ea6bfe30fe4cfadf3e4"
+        },
+        {
+            "date": 1696439298653,
+            "name": "C:\\WEB\\NEXT_LEVEL_2\\6_SQL\\6.API_GET_WAY\\1.um-auth-service-api-getway\\logs\\winston\\errors\\SHu-2023-04-10-23-error.log",
+            "hash": "1655412a938ac7c0f576cf4fdbcbec6257aaa6916b71fbb8494ff0d48fb36576"
+        }
+    ],
+    "hashType": "sha256"
+}
