@@ -12,6 +12,7 @@ import { ManagementDepartment } from './managementDepartment.model';
 const createDepartment = async (
   payload: IManagementDepartment
 ): Promise<IManagementDepartment | null> => {
+  console.log(payload, 'mmmmmmmmmmmmm');
   const result = await ManagementDepartment.create(payload);
   return result;
 };
