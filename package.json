@@ -12,7 +12,10 @@
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --write .",
     "lint-prettier": "yarn lint:check && yarn prettier:check",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:migrate":"npx prisma migrate dev",
+    "prisma:generate":"npx prisma generate",
+    "prisma:studio":"npx prisma studio"
   },
   "author": "Programming Hero",
   "license": "ISC",

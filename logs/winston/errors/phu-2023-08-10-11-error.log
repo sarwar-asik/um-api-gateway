@@ -1,0 +1,5 @@
+Sun Oct 08 2023 11:53:26 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicDepartment.create()` invocation:
+
+
+Foreign key constraint failed on the field: `academic-department_academicFacultyId_fkey (index)`

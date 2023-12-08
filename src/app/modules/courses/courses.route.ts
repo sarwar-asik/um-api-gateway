@@ -18,8 +18,8 @@ router.post(
   router.get('/',CoursesController.getAllDb);
 router.get('/:id',CoursesController.getSingleDataById)
 
-router.put('/:id',CoursesController.updateIntoDb)
-router.delete('/:id',CoursesController.updateIntoDb)
+router.patch('/:id',CoursesController.updateIntoDb)
+router.delete('/:id',CoursesController.deleteFromDb)
 
 router.post("/:id/assign-faculties",
 validateRequest(CoursesValidation.assignOrRemoveFaculties),

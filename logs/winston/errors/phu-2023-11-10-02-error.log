@@ -1,0 +1,21 @@
+Wed Oct 11 2023 2:12:9 } [PH] error: 
+Invalid `prisma.student.create()` invocation:
+
+{
+  data: {
+    studentId: "160100003",
+    firstName: "Sarwar",
+    lastName: "Asik",
+    middleName: "Hossain",
+    email: "sarwarasik@gmail.com",
+    contactNo: "+8802345325",
+    gender: "male",
+    bloodGroup: "A-",
+    academicSemesterId: "3fdde5f9-44cf-434f-af8b-e950f9a8e010",
+    academicDepartmentId: "4a124752-ca46-4cb7-9b88-8dadb9c11ce0",
+    academicFacultyId: "c4741159-53d9-4a0f-8fa5-1e41a5a0563e",
++   profileImage: String
+  }
+}
+
+Argument `profileImage` is missing.

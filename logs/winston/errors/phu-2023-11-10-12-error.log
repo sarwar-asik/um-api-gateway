@@ -1,0 +1,84 @@
+Wed Oct 11 2023 12:17:11 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "OOP Mastering ",
+    code: "CSE-11002",
+    credits: 8,
+    coursePreRequisites: [
+    ~~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "8bac804a-5a50-4c98-a129-ee192172e060"
+      },
+      {
+        courseId: "6c90e6b1-9237-4df0-aa98-956aee899d1b"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   prerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPrerequisiteInput,
+?   faculties?: CourseFacultyCreateNestedManyWithoutCourseInput,
+?   offeredCourses?: OfferedCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `coursePreRequisites`. Available options are listed in green.
+Wed Oct 11 2023 12:18:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "OOP Master",
+    code: "CSE-11002",
+    credits: 8,
+    coursePreRequisites: [
+    ~~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "8c9f34bb-3130-4525-b2f5-473a5002c16a"
+      },
+      {
+        courseId: "6c90e6b1-9237-4df0-aa98-956aee899d1b"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   prerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPrerequisiteInput,
+?   faculties?: CourseFacultyCreateNestedManyWithoutCourseInput,
+?   offeredCourses?: OfferedCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `coursePreRequisites`. Available options are listed in green.
+Wed Oct 11 2023 12:19:35 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "OOP Master",
+    code: "CSE-11002",
+    credits: 8,
+    coursePreRequisites: [
+    ~~~~~~~~~~~~~~~~~~~
+      {
+        courseId: "8c9f34bb-3130-4525-b2f5-473a5002c16a"
+      }
+    ],
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   prerequisite?: CourseToPrerequisiteCreateNestedManyWithoutCourseInput,
+?   prerequisiteFor?: CourseToPrerequisiteCreateNestedManyWithoutPrerequisiteInput,
+?   faculties?: CourseFacultyCreateNestedManyWithoutCourseInput,
+?   offeredCourses?: OfferedCourseCreateNestedManyWithoutCourseInput,
+?   studentEnrolledCourses?: StudentEnrolledCourseCreateNestedManyWithoutCourseInput
+  }
+}
+
+Unknown argument `coursePreRequisites`. Available options are listed in green.

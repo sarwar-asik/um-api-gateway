@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/sarwar-asik/WEB/NEXT_LEVEL_2/6_SQL/6.API_GET_WAY/2.university-management-core-service-starter/logs/winston/successes/.017fc83410ed90eabb3a8448bf8860fdb4283f90-audit.json",
+    "files": [
+        {
+            "date": 1701957758201,
+            "name": "/home/sarwar-asik/WEB/NEXT_LEVEL_2/6_SQL/6.API_GET_WAY/2.university-management-core-service-starter/logs/winston/successes/phu-2023-07-12-20-success.log",
+            "hash": "3f8c8cace67c3a219e195bfcf99c45765f45cbce1f47c60136014c75ae98521c"
+        },
+        {
+            "date": 1702044338014,
+            "name": "/home/sarwar-asik/WEB/NEXT_LEVEL_2/6_SQL/6.API_GET_WAY/2.university-management-core-service-starter/logs/winston/successes/phu-2023-08-12-20-success.log",
+            "hash": "535af8df635065cff1e519aab1d02ed5b0d59803724ce44917e629cdac6263e9"
+        }
+    ],
+    "hashType": "sha256"
+}
