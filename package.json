@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
@@ -15,7 +15,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prisma:migrate":"npx prisma migrate dev",
     "prisma:generate":"npx prisma generate",
-    "prisma:studio":"npx prisma studio"
+    "prisma:studio":"npx prisma studio",
+    "postinstall": "prisma generate"
   },
   "author": "Programming Hero",
   "license": "ISC",

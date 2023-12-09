@@ -14,6 +14,11 @@
             "date": 1702044338025,
             "name": "/home/sarwar-asik/WEB/NEXT_LEVEL_2/6_SQL/6.API_GET_WAY/2.university-management-core-service-starter/logs/winston/errors/phu-2023-08-12-20-error.log",
             "hash": "4ff26f38406944c53db78277225a1e1fa0940a40789a7ce10a08a19d42b66691"
+        },
+        {
+            "date": 1702093012282,
+            "name": "/home/sarwar-asik/WEB/NEXT_LEVEL_2/6_SQL/6.API_GET_WAY/2.university-management-core-service-starter/logs/winston/errors/phu-2023-09-12-09-error.log",
+            "hash": "76702a3a9413b543f8bd4575e0a46f0be2d0be849cdc245d81b92b4d8be95889"
         }
     ],
     "hashType": "sha256"
